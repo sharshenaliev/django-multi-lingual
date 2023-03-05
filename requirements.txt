@@ -5,3 +5,4 @@ django-parler==2.3
 django-parler-rest==2.2
 djangorestframework==3.14.0
 drf-yasg==1.21.5
+Pillow==9.4.0
