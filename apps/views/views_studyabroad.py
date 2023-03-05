@@ -27,7 +27,10 @@ class Languages(ListAPIView):
 
 class Photos(ListAPIView):
     serializer_class = PhotosSerializers
-    queryset = EducationPhotos.objects.all()
+
+    def get_queryset(self):
+        queryset = EducationPhotos.objects.filter(education_center_id=self.kwargs['pk'])
+        return queryset
 
 
 class Centers(ListAPIView):

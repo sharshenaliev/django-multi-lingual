@@ -33,7 +33,7 @@ urlpatterns = [
     path('images', Images.as_view()),
     path('videos', Videos.as_view()),
     path('icons', Icons.as_view()),
-    path('photos', Photos.as_view()),
+    path('photos/<int:pk>/', Photos.as_view()),
     path('contacts', Contacts.as_view()),
     path('feedback', Feedback.as_view())
 ]

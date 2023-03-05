@@ -89,6 +89,9 @@ class EducationCenters(TranslatableModel):
         verbose_name = "Учебное заведение"
         verbose_name_plural = "Учебные заведения"
 
+    def __str__(self):
+        return self.name
+
 
 class EducationPhotos(models.Model):
     education_center = models.ForeignKey(EducationCenters, on_delete=models.CASCADE)
